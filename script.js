@@ -41,6 +41,7 @@ const time = document.querySelector('#time');
 const boxOffice = document.querySelector('#boxOffice');
 const vote = document.querySelector('#vote');
 
+console.log("git-test");
 
 for(let i = 0; i < btns.length; i++)
 {
