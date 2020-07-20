@@ -67,18 +67,21 @@ for(let i = 0; i < btns.length; i++)
 }
 
 */
-var	title = document.querySelector('#title');
-var	postTitle = document.querySelector('#postTitle');
-var	description = document.querySelector('#description');
-
 function getSearchValue(){
 	let inputId = document.querySelector('#mySearch').value;
 	fetch('https://jsonplaceholder.typicode.com/posts/'+inputId)
 	.then(response => response.json())
 	.then(data => {
+	var	title = document.querySelector('#title');
+	var	postTitle = document.querySelector('#postTitle');
+	var	description = document.querySelector('#description');
 		title.textContent = data.title;
 		postTitle.textContent = data.id;
 		description.textContent = data.body;
 		console.log(title);
+	})
+	.catch(error => {
+	  alert('oops, error:', error);
 	});
+	;
 }
