@@ -1,6 +1,4 @@
-
 /*
-
 const allMovies = [
 {
 	backgroundImage:"https://image.tmdb.org/t/p/original/ByDf0zjLSumz1MP1cDEo2JWVtU.jpg",
@@ -44,7 +42,7 @@ const time = document.querySelector('#time');
 const boxOffice = document.querySelector('#boxOffice');
 const vote = document.querySelector('#vote');
 
-=======
+
 console.log("git-test");
 
 for(let i = 0; i < btns.length; i++)
@@ -67,9 +65,11 @@ for(let i = 0; i < btns.length; i++)
   	}
 	});
 }
-*/
 
+*/
 var	title = document.querySelector('#title');
+var	postTitle = document.querySelector('#postTitle');
+var	description = document.querySelector('#description');
 
 function getSearchValue(){
 	let inputId = document.querySelector('#mySearch').value;
@@ -77,8 +77,8 @@ function getSearchValue(){
 	.then(response => response.json())
 	.then(data => {
 		title.textContent = data.title;
+		postTitle.textContent = data.id;
+		description.textContent = data.body;
 		console.log(title);
 	});
 }
-
-//update test
